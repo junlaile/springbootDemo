@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${msg_demo}">demo</h1>
+    <h1 th:text="${msg_host}">host</h1>
+
+    <table>
+        <tr>
+           <th>id</th>
+           <th>name</th>
+           <th>info</th>
+           <th>money</th>
+        </tr>
+        <tr th:each="steam : ${steams}">
+            <td th:text="${steam.id}">id</td>
+            <td th:text="${steam.name}">name</td>
+            <td th:text="${steam.info}">info</td>
+            <td th:text="${steam.money}">money</td>
+        </tr>
+    </table>
+</body>
+</html>
